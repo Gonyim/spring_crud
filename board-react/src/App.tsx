@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import axios from "axios";
-import SignUp from './views/SignUp';
 
-function App() {
+import './App.css';
+import Athentication from './views/Athentication';
+
+export default function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <SignUp />
-    </div>
+    <Athentication />
   );
 }
-
-export default App;
