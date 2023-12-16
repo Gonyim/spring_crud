@@ -1,5 +1,6 @@
 package com.gony.board.entity;
 
+import com.gony.board.dto.SignUpDto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -22,4 +23,12 @@ public class UserEntity {
     private String userPhoneNumber;
     private String userAddress;
     private String userProfile;
+
+    public UserEntity(SignUpDto dto) {
+        this.userEmail = dto.getUserEmail();
+        this.userPassword = dto.getUserPassword();
+        this.userNickname = dto.getUserNickname();
+        this.userPhoneNumber = dto.getUserPhoneNumber();
+        this.userAddress = dto.getUserAddress() + " " + dto.getUserAddressDetail();
+    }
 }
